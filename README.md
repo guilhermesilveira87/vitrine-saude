@@ -2,7 +2,6 @@
 
 > **Projeto de Extensão II – Curso de Engenharia de Software – Anhanguera Educacional**  
 > Autor: **Guilherme Pires da Silveira**  
-> Orientação: Prof.ª (Nome da orientadora, se desejar incluir)  
 > Entrega: 2025
 
 ---
