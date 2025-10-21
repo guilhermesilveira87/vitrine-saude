@@ -1,0 +1,248 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+/* ===== CABEÇALHO ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0.6rem 2%;
+  max-width: 1200px; 
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  height: 80px;
+}
+
+.titulo-prefeitura h1 {
+  font-size: 1.6rem;
+  color: #004f60;
+  font-weight: 700;
+}
+
+.titulo-prefeitura p {
+  font-size: 1.3rem;
+  color: #007b7f;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #002d40;
+  font-weight: 600;
+  transition: 1s;
+}
+
+.botao-contato {
+  background: #003f63;
+  color: #fff;
+  padding: 0.5rem 0.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* ===== HERO ===== */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fbfd;
+  padding: 1.5rem 2%;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  gap: 1rem;
+  min-height: auto;
+}
+
+.texto-hero {
+  max-width: 1200px;
+}
+
+.texto-hero h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #003f63;
+  margin-bottom: 1rem;
+}
+
+.texto-hero p {
+  font-size: clamp(1rem, 2.2vw, 2rem);
+  color: #444;
+  line-height: 1.2;
+  margin-top: 0.6rem;
+}
+
+.img-hero {
+  flex: 0 0 40%;
+  max-width: 420px;
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  margin-right: 0;
+}
+
+/* ===== CARDS ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  justify-content: center;
+  padding: 1rem 2%;
+  background: #fff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  padding: 1rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 440px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  height: 100px; 
+  margin-bottom: 0.3rem;
+}
+
+.card h3 {
+  color: #003f63;
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.card p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.2;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  background-color: #003f63;
+  color: #f2f6f8;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem 4%;
+  }
+
+  .img-hero {
+    width: 70%;
+    max-width: 420px  ;
+    margin-top: 2rem;
+    flex: 0 0 auto;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Páginas Internas ---------- */
+
+.pagina-conteudo {
+  max-width: 900px;
+  margin: 5rem auto 3rem auto;
+  padding: 2.5rem;
+  background: #f9fbfd;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.pagina-conteudo h2 {
+  color: #003f63;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.pagina-conteudo p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.lista-conteudo {
+  list-style: none;
+  margin-top: 1.5rem;
+  padding-left: 0;
+}
+
+.lista-conteudo li {
+  background: #fff;
+  margin-bottom: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  font-size: 1.05rem;
+}
+
+.botao-voltar {
+  display: inline-block;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  background-color: #003f63;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.botao-voltar:hover {
+  background-color: #005a88;
+  transform: scale(1.02);
+}
+
+/* Navbar ativo */
+nav a.ativo {
+  font-weight: bold;
+  color: #005a88;
+}
+
